@@ -1,6 +1,4 @@
-# Indicate the name of the program
-# Give a short description of the problem solved
-# Give a short description on how to run your code
+
 #Name of program: assignment-1.ipynb
     #this program implements a named entity recognizer for dates(fixed and formal) using regular expressions & outputs the identified expressions in an output file (output.txt) 
 
