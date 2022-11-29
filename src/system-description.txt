@@ -1,0 +1,24 @@
+# Outline the system structure (including necessary files and directories for running the code) #
+
+ALGORITHM OUTLINE:
+- program reads in an input file that with each sentence on a new line and stored as a string 
+- program then proceeds to run a series of regular expressions in order to extract valid fixed dates and federal holidays. 
+    - the longest regular expressions are searched for first
+    - each regular expression is built off a set of base patterns (ex. months, days of the week, etc.) that I have written
+    - once a valid match is found, that substring is removed from the input string so that following regular expressions do not also catch that substring. For example:
+            - a regular expression searches for month, date, year (ex. January 3rd, 2014). This substring is removed from the input text string. 
+            - a following regular expression for years will then not also return the same '2014' as it has already been identified as part of a longer substring. 
+    - valid matches are stored in a running list and then written to output.txt, with each match on a separate line. 
+    
+
+NECESSARY FILES:
+- assignment-1.ipynb in directory 'assignment-1-zeynepmarasli/src/Code'
+- input.txt in directory 'assignment-1-zeynepmarasli/src/Data/Input'
+- federal_holidays.txt in directory 'assignment-1-zeynepmarasli/src/Data/Input'
+- output.txt in directory 'assignment-1-zeynepmarasli/src/Data/Output'
+
+    NOTE: 
+        - This program takes input from two files: the input text (input.txt) and a file containing federal holidays (federal_holidays.txt). In order for this code to run, the user will need to change the file paths for these folders for their own computers. It is currently set to my computer: 
+                    input_file = open("/Users/zeynepmarasli/assignment-1-zeynepmarasli/src/Data/Input/input.txt", "r")
+                    
+        - This program also writes the matched regular expressions to an output file, output.txt. In order for this to run, the user must also change the directory for the output file. Currently it is set to my computer similar to the above example. 
